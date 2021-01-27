@@ -43,3 +43,22 @@ const solution = (number) => {
   }
   return sum;
 };
+
+/////////////////////////////////////////
+//////////////////////////////////////
+/////////////////////////////////////
+
+// input string // output string with spaces
+const solution = (string) => {
+  
+  let brokenCamelCase = '';
+  for (let i = 0; i < string.length; i++) {
+    const char = string[i];
+    if (char === char.toUpperCase()) {
+      brokenCamelCase += ` ${char}` 
+    } else {
+      brokenCamelCase += char;
+    }
+  }
+  return brokenCamelCase;
+}
