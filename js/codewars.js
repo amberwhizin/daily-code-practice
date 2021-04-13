@@ -97,7 +97,7 @@
 
 function order(words) {
   debugger;
-  var array = words.split(" ");
+  var array = words.split(' ');
   var sortedArray = [];
   for (i = 0; i <= array.length; i++) {
     for (j = 0; j < array.length; j++) {
@@ -106,24 +106,29 @@ function order(words) {
       }
     }
   }
-  return sortedArray.join(" ");
+  return sortedArray.join(' ');
 }
-
 
 const mouthSize = (animal) => {
   const r = animal.toLowerCase();
-  
+
   for (let i = 0; i < r.length; i++) {
     if (r === 'alligator') {
       return 'small';
     } else {
-      return 'wide'
+      return 'wide';
     }
   }
-}
+};
 
 const TempleStrings = (obj, feature) => {
-  return `${obj} are ${feature}`
-}
+  return `${obj} are ${feature}`;
+};
 
-
+const apple = (x) => {
+  if (Math.pow(x, 2) > 1000) {
+    return "It's hotter than the sun!!";
+  } else {
+    return 'Help yourself to a honeycomb Yorkie for the glovebox.';
+  }
+};
