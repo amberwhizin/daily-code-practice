@@ -95,40 +95,50 @@
 //   return sentence;
 // };
 
-function order(words) {
-  debugger;
-  var array = words.split(' ');
-  var sortedArray = [];
-  for (i = 0; i <= array.length; i++) {
-    for (j = 0; j < array.length; j++) {
-      if (array[j].indexOf(i) >= 0) {
-        sortedArray.push(array[j]);
-      }
-    }
-  }
-  return sortedArray.join(' ');
-}
+// function order(words) {
+//   debugger;
+//   var array = words.split(' ');
+//   var sortedArray = [];
+//   for (i = 0; i <= array.length; i++) {
+//     for (j = 0; j < array.length; j++) {
+//       if (array[j].indexOf(i) >= 0) {
+//         sortedArray.push(array[j]);
+//       }
+//     }
+//   }
+//   return sortedArray.join(' ');
+// }
 
-const mouthSize = (animal) => {
-  const r = animal.toLowerCase();
+// const mouthSize = (animal) => {
+//   const r = animal.toLowerCase();
 
-  for (let i = 0; i < r.length; i++) {
-    if (r === 'alligator') {
-      return 'small';
-    } else {
-      return 'wide';
-    }
-  }
-};
+//   for (let i = 0; i < r.length; i++) {
+//     if (r === 'alligator') {
+//       return 'small';
+//     } else {
+//       return 'wide';
+//     }
+//   }
+// };
 
-const TempleStrings = (obj, feature) => {
-  return `${obj} are ${feature}`;
-};
+// const TempleStrings = (obj, feature) => {
+//   return `${obj} are ${feature}`;
+// };
 
-const apple = (x) => {
-  if (Math.pow(x, 2) > 1000) {
-    return "It's hotter than the sun!!";
+// const apple = (x) => {
+//   if (Math.pow(x, 2) > 1000) {
+//     return "It's hotter than the sun!!";
+//   } else {
+//     return 'Help yourself to a honeycomb Yorkie for the glovebox.';
+//   }
+// };
+
+const catMouse = (stringy) => {
+  const dots = stringy.slice(1, stringy.length - 1);
+
+  if (dots.length > 3) {
+    return 'Escaped!';
   } else {
-    return 'Help yourself to a honeycomb Yorkie for the glovebox.';
+    return 'Caught!';
   }
 };
