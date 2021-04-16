@@ -142,3 +142,18 @@ const catMouse = (stringy) => {
     return 'Caught!';
   }
 };
+
+const fakeBin = (x) => {
+  let binary = '';
+
+  for (let i = 0; i < x.length; i++) {
+    const numString = x[i];
+
+    if (numString < 5) {
+      binary += '0';
+    } else {
+      binary += '1';
+    }
+  }
+  return binary;
+};
