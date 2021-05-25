@@ -95,7 +95,7 @@
 //   return sentence;
 // };
 
-// function order(words) {
+// const order = (words) => {
 //   debugger;
 //   var array = words.split(' ');
 //   var sortedArray = [];
@@ -133,27 +133,67 @@
 //   }
 // };
 
-const catMouse = (stringy) => {
-  const dots = stringy.slice(1, stringy.length - 1);
+// const catMouse = (stringy) => {
+//   const dots = stringy.slice(1, stringy.length - 1);
 
-  if (dots.length > 3) {
-    return 'Escaped!';
-  } else {
-    return 'Caught!';
-  }
-};
+//   if (dots.length > 3) {
+//     return 'Escaped!';
+//   } else {
+//     return 'Caught!';
+//   }
+// };
 
-const fakeBin = (x) => {
-  let binary = '';
+// console.log(catMouse('wordy words'))
 
-  for (let i = 0; i < x.length; i++) {
-    const numString = x[i];
+/////////////
 
-    if (numString < 5) {
-      binary += '0';
-    } else {
-      binary += '1';
-    }
-  }
-  return binary;
-};
+// const fakeBin = (x) => {
+//   let binary = '';
+
+//   for (let i = 0; i < x.length; i++) {
+//     const numString = x[i];
+
+//     if (numString < 5) {
+//       binary += '0';
+//     } else {
+//       binary += '1';
+//     }
+//   }
+//   return binary;
+// };
+
+// console.log(fakeBin([4, 5, 8, -2]));
+
+/////////////
+
+// example1 = 'Hello World!';
+// example2 = 'What is happening here?';
+// example3 = 'Am I super cool?';
+
+// const removeExclamationMarks = (deleteSymbol) => {
+//   //   console.log(deleteSymbol)
+//   const splitString = deleteSymbol.split('');
+//   //   console.log(splitString)
+//   splitString.pop();
+//   //   console.log(splitString.join(''))
+//   return splitString.join('');
+// };
+
+// console.log(removeExclamationMarks(example3));
+
+//////////////////
+
+// const vowels = 'aeiou';
+
+// function disemvowel(str) {
+//   return (
+//     str
+//       .split('')
+//       .filter((letter) => !vowels.includes(letter.toLowerCase()))
+//       //if vowels 'do not include' ( => !vowels) letter in original string (changed to lowercase letters just before we interpret the answer)
+//       // then join them!
+//       .join('')
+//   );
+// }
+
+// console.log(disemvowel('trolls be gone!'));
