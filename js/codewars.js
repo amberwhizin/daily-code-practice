@@ -197,3 +197,22 @@
 // }
 
 // console.log(disemvowel('trolls be gone!'));
+
+///////////////////////////////////
+// fullstack practice source--> https://learn.fullstackacademy.com/workshop/5ab509868b62ab0004346be6/content/5ab509868b62ab0004346be8/text
+
+
+// source --> eloquent Javascript --> https://eloquentjavascript.net///
+// let total = 0,
+//   count = 1;
+// console.log('total: ', total);
+// console.log('count: ', count, '\n');
+// while (count <= 10) {
+//   total += count;
+//   count += 1;
+//   console.log('total: ', total);
+//   console.log('count: ', count, '\n');
+// }
+// console.log('total: ', total);
+// console.log('count: ', count, '\n');
+//console.log(total) //55
