@@ -201,7 +201,6 @@
 ///////////////////////////////////
 // fullstack practice source--> https://learn.fullstackacademy.com/workshop/5ab509868b62ab0004346be6/content/5ab509868b62ab0004346be8/text
 
-
 // source --> eloquent Javascript --> https://eloquentjavascript.net///
 // let total = 0,
 //   count = 1;
@@ -216,3 +215,46 @@
 // console.log('total: ', total);
 // console.log('count: ', count, '\n');
 //console.log(total) //55
+
+// const opposite = (number) =>  {
+//     // if a number then make that number negative
+//     if (Number(number) === number) {
+//         return -number;
+//     } else {
+//         return number
+//     }
+//   }
+// console.log(opposite(5))
+// console.log(opposite(-6))
+// console.log(opposite(44))
+// console.log(opposite(-100))
+
+//////
+//WIP
+// const vaporCode = (stringy) => {
+//   const splitStringy = stringy.split('');
+//   const noSpacesInStringy = splitStringy.join('');
+
+//   let resultString = '';
+//   let spaceTrash = [];
+
+//   for (let i = 0; i < noSpacesInStringy.length; i++) {
+//     const letters = noSpacesInStringy[i];
+
+//     if (letters === ' ') {
+//       spaceTrash.push(letters);
+//     } else {
+//       resultString += letters + '  ';
+//       //its putting a space at the end
+//       //if there is no letter next then stop there
+//     }
+//   }
+
+//   return resultString.toUpperCase();
+// };
+
+// console.log(vaporCode("Let's go to the movies"));
+
+//////
+
+
