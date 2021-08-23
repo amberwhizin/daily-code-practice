@@ -257,4 +257,72 @@
 
 //////
 
+//edabit
 
+// const arrayToString = (arr) => {
+//   let result = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     result.push(element);
+//   }
+//   return result.join('');
+// };
+
+// console.log(arrayToString([1, 2, 3, 4, 5, 6])); //"123456"
+// console.log(arrayToString(['a', 'b', 'c', 'd', 'e', 'f'])); //"abcdef"
+// console.log(arrayToString([1, 2, 3, 'a', 's', 'dAAAA'])); //"123asdAAAA"
+
+// const addition = (num) => {
+//   let addOne = num += 1
+//   return addOne;
+// };
+
+// console.log(addition(0));
+// console.log(addition(5));
+// console.log(addition(10));
+
+// const minMax = (arr) => {
+//   let minMaxNums = [];
+
+//   const maxNum = Math.max(...arr);
+//   minMaxNums.unshift(maxNum);
+
+//   const minNum = Math.min(...arr);
+//   minMaxNums.unshift(minNum);
+
+//   return minMaxNums;
+// };
+
+// console.log(minMax([1, 2, 3, 4, 5]));
+
+// input => array
+// output => number
+
+// const getFirstValue = (arr) => {
+//   let firstElArr = 0;
+
+//   if (Array.isArray(arr)) {
+//     firstElArr += arr[0];
+//   }
+
+//   return firstElArr;
+// };
+// console.log(getFirstValue([1, 2, 3]));
+// console.log(getFirstValue([10, 8, 9]));
+// console.log(getFirstValue([25, 4, 7]));
+
+//input number
+//output boolean
+
+// const lessThanOrEqualToZero = (num) => {
+//   return num <= 0 ? true : false;
+// };
+
+// console.log(lessThanOrEqualToZero(5)); //false
+// console.log(lessThanOrEqualToZero(-1)); //true
+// console.log(lessThanOrEqualToZero(-10)); //true
+// console.log(lessThanOrEqualToZero(-100)); //true
+// console.log(lessThanOrEqualToZero(12)); //false
+// console.log(lessThanOrEqualToZero(14)); //false
+// console.log(lessThanOrEqualToZero(57)); //false
