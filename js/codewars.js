@@ -326,3 +326,33 @@
 // console.log(lessThanOrEqualToZero(12)); //false
 // console.log(lessThanOrEqualToZero(14)); //false
 // console.log(lessThanOrEqualToZero(57)); //false
+
+//////
+
+// const even_or_odd = (number) => {
+//   while (number % 2 === 0) {
+//     return 'Even';
+//   }
+//   return 'Odd';
+// };
+
+// console.log(even_or_odd(3)); //odd
+// console.log(even_or_odd(4)); //even
+// console.log(even_or_odd(10)); //even
+// console.log(even_or_odd(13)); //odd
+// console.log(even_or_odd(9)); //odd
+
+//////
+
+
+// const doYouPlayTheTheremin = (sirStringy) => {
+//     if (sirStringy[0] === 'S' || sirStringy[0] === 's') return true
+//     return false;
+// }
+
+
+// console.log(doYouPlayTheTheremin('Sarah'));
+// console.log(doYouPlayTheTheremin('saddy'));
+// console.log(doYouPlayTheTheremin('Mark'));
+// console.log(doYouPlayTheTheremin('Slick'));
+// console.log(doYouPlayTheTheremin('kiddo'));
