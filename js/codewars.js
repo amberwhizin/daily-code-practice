@@ -401,16 +401,26 @@ let ex4 = [1, 2, -10, 7, 8]; // 18
 //   return sum;
 // };
 //refactor using map()
-const positiveSum = (arr) => {
-  let sum = 0;
-  arr.map((el) => {
-    if (el >= 0) {
-      sum += el;
-    }
-  });
-  return sum;
-};
+// const positiveSum = (arr) => {
+//   let sum = 0;
+//   arr.map((el) => {
+//     if (el >= 0) {
+//       sum += el;
+//     }
+//   });
+//   return sum;
+// };
 
 //refactor using reduce()
+const positiveSum = (arr) => {
+  let initialValue = 0;
+  arr.reduce((previousValue, currentValue) => {
+    if (currentValue >= 0) {
+      previousValue + currentValue;
+      initialValue += currentValue;
+    }
+  }, initialValue);
+  return initialValue;
+};
 
-console.log(positiveSum(ex2));
+console.log(positiveSum(ex1));
