@@ -344,15 +344,73 @@
 
 //////
 
-
 // const doYouPlayTheTheremin = (sirStringy) => {
 //     if (sirStringy[0] === 'S' || sirStringy[0] === 's') return true
 //     return false;
 // }
-
 
 // console.log(doYouPlayTheTheremin('Sarah'));
 // console.log(doYouPlayTheTheremin('saddy'));
 // console.log(doYouPlayTheTheremin('Mark'));
 // console.log(doYouPlayTheTheremin('Slick'));
 // console.log(doYouPlayTheTheremin('kiddo'));
+
+///////////
+
+// const ex1 = [1, 2]; //[[1], [2]]
+// const ex2 = [1, 2, 3];
+// const ex3 = [8, 1, 5, 4, 6, 1, 1]; //[[1,5,1,1],[8,4,6]]
+
+//input - array, output - an array of all the odd even numbers in sep arr's
+// const pickIt = (arr) => {
+//   let odd = [],
+//     even = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let elementInArr = arr[i];
+
+//     if (elementInArr % 2) {
+//       odd.push(elementInArr);
+//     } else {
+//       even.push(elementInArr);
+//     }
+//   }
+//   console.log({ odd, even });
+//   return [odd, even];
+// };
+
+// console.log(pickIt(ex3));
+
+//////////
+
+//input - arr of nums, ouput - sum of positive nums
+
+let ex1 = [1, 2, -3, -4, -5]; //3
+let ex2 = [-1, -2, -3, -4, -5]; //0
+let ex3 = []; //0
+let ex4 = [1, 2, -10, 7, 8]; // 18
+
+// const positiveSum = (arr) => {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     const elInArr = arr[i];
+//     if (elInArr >= 0) {
+//       sum += elInArr;
+//     }
+//   }
+//   return sum;
+// };
+//refactor using map()
+const positiveSum = (arr) => {
+  let sum = 0;
+  arr.map((el) => {
+    if (el >= 0) {
+      sum += el;
+    }
+  });
+  return sum;
+};
+
+//refactor using reduce()
+
+console.log(positiveSum(ex2));
