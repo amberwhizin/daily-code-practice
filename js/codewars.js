@@ -412,15 +412,41 @@ let ex4 = [1, 2, -10, 7, 8]; // 18
 // };
 
 //refactor using reduce()
-const positiveSum = (arr) => {
-  let initialValue = 0;
-  arr.reduce((previousValue, currentValue) => {
-    if (currentValue >= 0) {
-      previousValue + currentValue;
-      initialValue += currentValue;
-    }
-  }, initialValue);
-  return initialValue;
-};
+// const positiveSum = (arr) => {
+//   let initialValue = 0;
+//   arr.reduce((previousValue, currentValue) => {
+//     if (currentValue >= 0) {
+//       previousValue + currentValue;
+//       initialValue += currentValue;
+//     }
+//   }, initialValue);
+//   return initialValue;
+// };
 
-console.log(positiveSum(ex1));
+// console.log(positiveSum(ex1));
+
+//////////////////////////
+//simpler reduce use...
+// const positiveSum = (arr) => {
+//   let initialValue = 0;
+
+//   const reducer = arr.reduce((previousVal, currentVal) => {
+//     if (currentVal > 0) {
+//       initialValue += currentVal;
+//     }
+//   }, initialValue);
+
+//   return initialValue;
+// };
+
+// console.log(positiveSum([1, 2, 3]));
+
+///////////////////////////////////////
+/////tiniest refactor!
+const positiveSum = arr => {
+  return arr.reduce((previous, current) => current > 0 ? previous + current : previous, 0)
+}
+// if current Value is greater than zero then add previous and current together. Otherwise return previous which would be zero because nothing was added to it and the initail Value starts at 0 above.
+
+console.log(positiveSum([1, 2, 3]));
+
