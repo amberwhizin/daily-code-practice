@@ -587,3 +587,38 @@
 // console.log(DNAStrand('TAAGC')); //"ATTCG"
 
 ////////////////////////
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+//examples
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+// input string
+// output string
+
+const breakCamelCasing = (string) => {
+  //use split to break up each character in the string and put into an array
+  // then map through each character and check for capital letters
+  // at each capital letter add a space until end of string
+  // if empty string return empty string
+  //check your work as you go Ber!
+
+  return string
+    .split('')
+    .map((charInString) => {
+      if (charInString === charInString.toUpperCase()) {
+        return ' ' + charInString;
+      } else {
+        return charInString;
+      }
+    })
+    .join('');
+};
+
+console.log(breakCamelCasing('camelCasing'));
+console.log(breakCamelCasing('camelCasingIsSoCool'));
+console.log(breakCamelCasing('identifier'));
+console.log(breakCamelCasing(''));
+// concatenate looked nicer than template literals
