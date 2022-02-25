@@ -598,27 +598,60 @@
 // input string
 // output string
 
-const breakCamelCasing = (string) => {
-  //use split to break up each character in the string and put into an array
-  // then map through each character and check for capital letters
-  // at each capital letter add a space until end of string
-  // if empty string return empty string
-  //check your work as you go Ber!
+// const breakCamelCasing = (string) => {
+// use split to break up each character in the string and put into an array
+// then map through each character and check for capital letters
+// at each capital letter add a space until end of string
+// if empty string return empty string
+// check your work as you go Ber!
 
-  return string
-    .split('')
-    .map((charInString) => {
-      if (charInString === charInString.toUpperCase()) {
-        return ' ' + charInString;
-      } else {
-        return charInString;
-      }
-    })
-    .join('');
-};
+//   return string
+//     .split('')
+//     .map((charInString) => {
+//       if (charInString === charInString.toUpperCase()) {
+//         return ' ' + charInString;
+//       } else {
+//         return charInString;
+//       }
+//     })
+//     .join('');
+// };
 
-console.log(breakCamelCasing('camelCasing'));
-console.log(breakCamelCasing('camelCasingIsSoCool'));
-console.log(breakCamelCasing('identifier'));
-console.log(breakCamelCasing(''));
+// console.log(breakCamelCasing('camelCasing'));
+// console.log(breakCamelCasing('camelCasingIsSoCool'));
+// console.log(breakCamelCasing('identifier'));
+// console.log(breakCamelCasing(''));
 // concatenate looked nicer than template literals
+
+//////////////////////////////////////////
+
+// Return the number (count) of vowels in the given string.
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+// The input string will only consist of lower case letters and/or spaces.
+
+//input - string
+//output - number
+// const getCount = (inputString) => {
+  // loop through the string
+  //split em up
+  //map through and
+  //if string matches anything in the vowel array add to count
+  // loop to the end of string
+  // declare vowel variable
+//   let vowels = ['a', 'e', 'i', 'o', 'u'];
+//   let vowelsCount = 0;
+
+//   inputString.split('').forEach((characterInString) => {
+//     if (vowels.includes(characterInString)) {
+//       ++vowelsCount;
+//     }
+//   });
+//   return vowelsCount;
+// };
+
+// console.log(getCount('abracadabra')); // 5
+// console.log(getCount('iliketobreakbacksew')); // 8
+
+//forEach over map() because im not returning an array
+
+
