@@ -632,12 +632,12 @@
 //input - string
 //output - number
 // const getCount = (inputString) => {
-  // loop through the string
-  //split em up
-  //map through and
-  //if string matches anything in the vowel array add to count
-  // loop to the end of string
-  // declare vowel variable
+// loop through the string
+//split em up
+//map through and
+//if string matches anything in the vowel array add to count
+// loop to the end of string
+// declare vowel variable
 //   let vowels = ['a', 'e', 'i', 'o', 'u'];
 //   let vowelsCount = 0;
 
@@ -653,5 +653,18 @@
 // console.log(getCount('iliketobreakbacksew')); // 8
 
 //forEach over map() because im not returning an array
+// and for loop becasuse i dont need to put it into an array first with split
+// const getVowelCount = (inputString) => {
+//   let vowels = ['a', 'e', 'i', 'o', 'u'];
+//   let vowelsCount = 0;
+//   for (let i = 0; i < inputString.length; i++) {
+//     if (vowels.includes(inputString[i])) {
+//       ++vowelsCount;
+//     }
+//   }
+//   return vowelsCount;
+// };
+
+///////////////////////////////////////////////////////////////
 
 
