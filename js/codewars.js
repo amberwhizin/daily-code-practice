@@ -385,10 +385,10 @@
 
 //input - arr of nums, ouput - sum of positive nums
 
-let ex1 = [1, 2, -3, -4, -5]; //3
-let ex2 = [-1, -2, -3, -4, -5]; //0
-let ex3 = []; //0
-let ex4 = [1, 2, -10, 7, 8]; // 18
+// let ex1 = [1, 2, -3, -4, -5]; //3
+// let ex2 = [-1, -2, -3, -4, -5]; //0
+// let ex3 = []; //0
+// let ex4 = [1, 2, -10, 7, 8]; // 18
 
 // const positiveSum = (arr) => {
 //   let sum = 0;
@@ -443,10 +443,147 @@ let ex4 = [1, 2, -10, 7, 8]; // 18
 
 ///////////////////////////////////////
 /////tiniest refactor!
-const positiveSum = arr => {
-  return arr.reduce((previous, current) => current > 0 ? previous + current : previous, 0)
-}
-// if current Value is greater than zero then add previous and current together. Otherwise return previous which would be zero because nothing was added to it and the initail Value starts at 0 above.
+// const positiveSum = arr => {
+//   return arr.reduce((previous, current) => current > 0 ? previous + current : previous, 0)
+// }
+// // if current Value is greater than zero then add previous and current together. Otherwise return previous which would be zero because nothing was added to it and the initail Value starts at 0 above.
 
-console.log(positiveSum([1, 2, 3]));
+// console.log(positiveSum([1, 2, 3]));
 
+/////////
+//merge arrays
+// const mergeArrays = (arr1, arr2) => {
+//   let slice = arr1.slice(0, 1);
+//   let mergedArrays = [];
+
+//   for (let i = 0; i < arr1.length; i++) {
+//     let item = arr1[i];
+//   }
+
+//   console.log(slice);
+// };
+
+// console.log(mergeArrays([1, 2, 3, 4, 5, 6, 7, 8], ['a', 'b', 'c', 'd', 'e']));
+
+// function mergeArrays(a, b) {
+//   let j = [],
+//     longest = a.length > b.length ? a : b;
+//   for (var i = 0; i < longest.length; i++) {
+//     if (a[i]) j.push(a[i]);
+//     if (b[i]) j.push(b[i]);
+//   }
+//   return j;
+// }
+
+// const mergeArrays = (arr1, arr2) => {
+//   let merged = [];
+//   const longestArr = arr1.length > arr2.length ? arr1 : arr2;
+//   // if arr1 is greater than the length of the arr2 the return arr1 else return arr2
+
+//   for (let i = 0; i < longestArr.length; i++) {
+//     // the for loop runs through arr1, in this test it is longer so arr1 be pushed into merged var
+//     const itemA = arr1[i]; // the element in a
+//     const itemB = arr2[i]; // the element in b
+
+//     if (itemA) {
+//       merged.push(itemA);
+//     }
+//     if (itemB) {
+//       merged.push(itemB);
+//     }
+//   }
+//   return merged;
+// };
+
+// console.log(mergeArrays([1, 2, 3, 4, 5, 6, 7, 8], ['a', 'b', 'c', 'd', 'e']));
+
+/////////
+
+// as long as hashtag is less than 8 add hashtag to empty string and print after every add
+// let hashtag = '';
+
+// for (let i = 0; i < 8; i++) {
+//   hashtag += '#';
+//   console.log(hashtag)
+// }
+
+// console.log(hashtag.length)
+
+////////////
+
+//fizzbuzz part 1
+
+// let fizz = 'Fizz';
+// let buzz = 'Buzz';
+// if num is divisible by 3, print "Fizz"
+// if num is divisible by 5, print "Buzz"
+// if num is divisible by 3 & 5 print "Fizz" + "Buzz"
+
+// let num = 0;
+// while (num >= 10) {
+//   if (num % 3 === 0) console.log(fizz)
+// }
+
+// 9 divided by 3 has a remainder of 0
+
+// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". You function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+// examples input->output
+//// "ATTGC" --> "TAACG"
+//// "GTAT" --> "CATA"
+
+//input string
+//output string
+
+// const DNAStrand = (dna) => {
+//   //return the reverse of a and t c and g.
+//   // iterate through the dna string
+//   // if A then return T  or operator?
+//   // if T then return A
+//   // if G return C
+//   // if C return G
+//   let complementaryDNAStrand = [];
+
+//   for (let i = 0; i < dna.length; i++) {
+//     let characterInDna = dna[i];
+//     // individual character
+//     if (characterInDna === 'A') {
+//       characterInDna = 'T';
+//       complementaryDNAStrand.push(characterInDna);
+//     } else if (characterInDna === 'T') {
+//       characterInDna = 'A';
+//       complementaryDNAStrand.push(characterInDna);
+//     }
+
+//     if (characterInDna === 'C') {
+//       characterInDna = 'G';
+//       complementaryDNAStrand.push(characterInDna);
+//     } else if (characterInDna === 'G') {
+//       characterInDna = 'C';
+//       complementaryDNAStrand.push(characterInDna);
+//     }
+//   }
+//   return complementaryDNAStrand.join('');
+// };
+
+// console.log(DNAStrand('ATTCG')); //"TAAGC"
+
+// revised
+// const pairs = { A: 'T', T: 'A', C: 'G', G: 'C' };
+// // when the .map sees A it sets the A to T
+// // when it sees T it sets T to A with key value pairs
+
+// const DNAStrand = (dna) => {
+//   const complementaryDNAStrand = dna
+//     .split('')
+//     .map((v) => {
+//       return pairs[v];
+//     })
+//     .join('');
+//   return complementaryDNAStrand;
+// };
+
+// console.log(DNAStrand('ATTCG')); //"TAAGC"
+// console.log(DNAStrand('TAAGC')); //"ATTCG"
+
+////////////////////////
