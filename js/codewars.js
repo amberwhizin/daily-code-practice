@@ -686,3 +686,78 @@
 
 // console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22])); //13
 // console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43])); //6
+
+///////////////////////////////////////////////
+
+// Write a function that will find all the anagrams of a word from a list. You will be given two inputs a word and an array with words. You should return an array of all the anagrams or an empty array if there are none.
+
+//input - 2 params - word & array of words
+//output - 1 param - array of anagram words
+
+// sort array
+// sort searchWord
+// if sort === sort
+// then put them in return array
+
+//this function turns strings into anagrams
+// const sortString = (string) => {
+//   return string.split('').sort().join('')
+// }
+
+// // console.log(sortString('abba'))
+
+// const findAnagrams = (word, array) => {
+//   let anagrams = [];
+//   console.log(typeof anagrams)
+// debugger
+//   for (let i = 0; i < array.length; i++) {
+//     let element = array[i];
+
+//     let searchWord = word
+//       .split('')
+//       .sort()
+//       .join('');
+
+//     let wordInArray = element
+//       .split('')
+//       .sort()
+//       .join('');
+
+//     if (wordInArray === searchWord) {
+//       anagrams += element;
+//     }
+//   }
+//   return anagrams;
+// };
+// console.log(findAnagrams('abba', ['aabb', 'abcd', 'bbaa', 'baba']));
+//=> ['aabb', 'bbaa', 'baba']
+
+// ---->  im getting "aabbbbaababa "... fix!
+
+////////////////////////////////////
+
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+//The returned format must be correct in order to complete this challenge.
+// Don't forget the space after the closing parentheses!
+
+//input numbers
+//string
+// const createPhoneNumber = (numbersArray) => {
+//   const areaCode = numbersArray.join('').slice(0, 3);
+//   const middle = numbersArray.join('').slice(3, 6);
+//   const end = numbersArray.join('').slice(6, 10);
+
+//   return `(${areaCode}) ${middle}-${end}`;
+// };
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // => returns "(123) 456-7890"
+// //awesome solution
+// function createPhoneNumber(numbers){
+//   var format = "(xxx) xxx-xxxx";
+  
+//   for(var i = 0; i < numbers.length; i++)
+//   {
+//     format = format.replace('x', numbers[i]);
+//   }
+  
+//   return format;
+// }
