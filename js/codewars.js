@@ -753,11 +753,50 @@
 // //awesome solution
 // function createPhoneNumber(numbers){
 //   var format = "(xxx) xxx-xxxx";
-  
+
 //   for(var i = 0; i < numbers.length; i++)
 //   {
 //     format = format.replace('x', numbers[i]);
 //   }
-  
+
 //   return format;
 // }
+
+//////////////////////////////////////////////
+
+// Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+// ex ->
+// Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+
+// String.prototype.toJadenCase = function () {
+//     return this.split(" ").map(function(word){
+//       return word.charAt(0).toUpperCase() + word.slice(1);
+//     }).join(" ");
+//   }
+
+const jaden = (string) => {
+  return (
+    string
+      .split(' ')
+      .map((w) => w[0].toUpperCase() + w.slice(1))
+      // the piece of  info we need from every word is the first letter capitalized and then send in the rest with slice
+      .join(' ')
+  );
+};
+
+const jaden2 = (string) => {
+  const words = string.split(' ');
+  let output = []; //new array that map does under the hood
+  for (let i = 0; i < words.length; i++) {
+    const w = words[i]; //  you
+    output[i] = w[0].toUpperCase() + w.slice(1);
+    //output[i] = setting the index of the new array for each element in the previous string
+    // then slicing in every other character in the element till the end of it from index 1
+  }
+  return output.join(' ');
+};
+
+console.log(jaden('how are you'));
+console.log(jaden2('how are you'));
