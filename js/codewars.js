@@ -764,6 +764,8 @@
 
 //////////////////////////////////////////////
 
+//map explained! /////////
+
 // Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
 
 // ex ->
@@ -776,27 +778,48 @@
 //     }).join(" ");
 //   }
 
-const jaden = (string) => {
-  return (
-    string
-      .split(' ')
-      .map((w) => w[0].toUpperCase() + w.slice(1))
-      // the piece of  info we need from every word is the first letter capitalized and then send in the rest with slice
-      .join(' ')
-  );
+// const jaden = (string) => {
+//   return (
+//     string
+//       .split(' ')
+//       .map((w) => w[0].toUpperCase() + w.slice(1))
+//       // the piece of  info we need from every word is the first letter capitalized and then send in the rest with slice
+//       .join(' ')
+//   );
+// };
+
+// const jaden2 = (string) => {
+//   const words = string.split(' ');
+//   let output = []; //new array that map does under the hood
+//   for (let index = 0; index < words.length; index++) {
+//     const word = words[index]; //  you
+//     // console.log(word)
+//     output[index] = word[0].toUpperCase() + word.slice(1);
+//     //output[i] = setting the index of the new array for each element in the previous string
+//     // then slicing in every other character in the element till the end of it from index 1
+//   }
+//   return output.join(' ');
+// };
+
+// // console.log(jaden('how are you'));
+// console.log(jaden2('how are you'));
+
+////////////////////////////////////////////////
+
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+// i.e. --> friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+
+//input => array
+//output => array of your friends
+const friend = (friends) => {
+  return friends.filter((friend) => friend.length === 4);
 };
 
-const jaden2 = (string) => {
-  const words = string.split(' ');
-  let output = []; //new array that map does under the hood
-  for (let i = 0; i < words.length; i++) {
-    const w = words[i]; //  you
-    output[i] = w[0].toUpperCase() + w.slice(1);
-    //output[i] = setting the index of the new array for each element in the previous string
-    // then slicing in every other character in the element till the end of it from index 1
-  }
-  return output.join(' ');
-};
-
-console.log(jaden('how are you'));
-console.log(jaden2('how are you'));
+console.log(friend(['Ryan', 'Kieran', 'Jason', 'Yous']));
+console.log(friend(['Ryan', 'carr', 'Jason', 'Yous']));
+console.log(friend(['Ryan', 'carr', 'Jason', 'Yousy']));
