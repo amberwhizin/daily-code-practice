@@ -816,10 +816,40 @@
 
 //input => array
 //output => array of your friends
-const friend = (friends) => {
-  return friends.filter((friend) => friend.length === 4);
-};
+// const friend = (friends) => {
+//   return friends.filter((friend) => friend.length === 4);
+// };
 
-console.log(friend(['Ryan', 'Kieran', 'Jason', 'Yous']));
-console.log(friend(['Ryan', 'carr', 'Jason', 'Yous']));
-console.log(friend(['Ryan', 'carr', 'Jason', 'Yousy']));
+// console.log(friend(['Ryan', 'Kieran', 'Jason', 'Yous']));
+// console.log(friend(['Ryan', 'carr', 'Jason', 'Yous']));
+// console.log(friend(['Ryan', 'carr', 'Jason', 'Yousy']));
+
+////////////////////////////////////////////////
+
+// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+// The number can be negative already, in which case no change is required.
+// Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
+
+// ex
+// makeNegative(1);    // return -1
+// makeNegative(-5);   // return -5
+// makeNegative(0);    // return 0
+// makeNegative(0.12); // return -0.12
+
+// input - positive num
+//ouput - neg num
+// const makeNegative = (num) => {
+//   if (num === 0) return 0;
+//   if (num > 0) return Number('-' + num);
+//   if (num < 0) return num;
+// };
+
+//refacter
+// const makeNegative = (num) => {
+//   return num < 0 ? num : -num;
+// };
+// console.log(makeNegative(42));
+// console.log(makeNegative(0));
+// console.log(makeNegative(700));
+// console.log(makeNegative(-60));
