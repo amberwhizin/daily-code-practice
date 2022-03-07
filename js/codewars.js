@@ -853,3 +853,80 @@
 // console.log(makeNegative(0));
 // console.log(makeNegative(700));
 // console.log(makeNegative(-60));
+
+////////////////////////////////////////////////
+
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+// input string
+// string
+// const removeChar = (str) => {
+//  let substringString = str.substring(1, str.length- 1)
+// return substringString
+// };
+
+// console.log(removeChar('eloquent'));
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// Will you make it?
+// You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true (1 in Prolog and NASM) if it is possible and false (0 in Prolog and NASM) if not. The input values are always positive.
+
+//input - number
+//output - boolean
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   // i have 2 gallons
+//   let math = fuelLeft * mpg // distance my car can travel!
+//   let canIMakeIt = math < distanceToPump ? false : true;
+//   return canIMakeIt;
+// };
+
+//refactor
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => mpg * fuelLeft >= distanceToPump;
+// //if my gas amount is greater than or equal to the distance to the pump then true, everything else false
+
+// console.log(zeroFuel(50, 25, 2)); //true will make it
+// console.log(zeroFuel(100, 50, 1)); //false
+// console.log(zeroFuel(100, 50, 2)); //true
+// console.log(zeroFuel(400, 50, 2)); //false
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+// Return True if yes, False otherwise :)
+
+// const hero = (bulletsIHave, dragons) => {
+//   const dragonMath = dragons * 2;
+//   return toEndBeautifulDragonOrNot = dragonMath <= bulletsIHave;
+// };
+
+// console.log(hero(4, 5)); //false
+// console.log(hero(100, 40)); //true
+// console.log(hero(1500, 751)); //false
+// console.log(hero(0, 1)); //false
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+//input boolean
+//output string
+// const boolToWord = (bool) => {
+//   return bool === true? 'Yes' : 'No';
+// };
+// //refactor
+// const boolToWord = (bool) => {
+//   return bool === true? 'Yes' : 'No'; //if its true it will accept first argument if false the second, ha
+// };
+
+// console.log(boolToWord(true));
+// console.log(boolToWord(false));
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// const booleanToString = (b) => {
+//   return String(b);
+// };
+
+// console.log(booleanToString(true));
