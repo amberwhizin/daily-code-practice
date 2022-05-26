@@ -930,3 +930,58 @@
 // };
 
 // console.log(booleanToString(true));
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// Given a number n, return the number of positive odd numbers below n, EASY!
+
+// const oddCount = (n) => {
+//   let count = 0;
+
+//     for (let i = n - 1; i >= 0; i--) {
+//       // set i to our number // while n above 0 count backwards
+//       if (i % 2) count++;
+//     }
+//     return count;
+// };
+//refacter
+//thought they were asking me to do a loop, but the loop was taking too long since they had a billion tests to run it with
+// const oddCount = (n) => {
+//an integer that can be divided by 2 is an even number, and integer that cant be divided by 2 is odd
+//  let isItEvenOrOdd = n % 2
+// if (isItEvenOrOdd) {
+// console.log(isItEvenOrOdd)
+//  // console.log((n - 1) / 2);
+//   //return (n - 1) / 2;
+// }
+
+//return n / 2;
+// };
+
+// console.log(oddCount(15)); // 7, - [1, 3, 5, 7, 9, 11, 13]
+// console.log(oddCount(7)); // 3, - [5, 3, 1]
+// console.log(oddCount(8)); // 4, - [7,5,3,1]
+
+////////////////////////////////////////////////////////////////////////////////
+
+const plusMinus = (arr) => {
+  let len = arr.length;
+  let positive = 0;
+  let negative = 0;
+  let zero = 0;
+
+  for (let i = 0; i < len; i++) {
+    if (arr[i] > 0) positive++;
+    if (arr[i] < 0) negative++;
+    if (arr[i] === 0) zero++;
+  }
+  const posRatio = positive / len;
+  const negRatio = negative / len;
+  const zeroRatio = zero / len;
+
+  console.log(posRatio.toFixed(6));
+  console.log(negRatio.toFixed(6));
+  console.log(zeroRatio.toFixed(6));
+};
+
+console.log(plusMinus([-4, 3, -9, 0, 4, 1]));
